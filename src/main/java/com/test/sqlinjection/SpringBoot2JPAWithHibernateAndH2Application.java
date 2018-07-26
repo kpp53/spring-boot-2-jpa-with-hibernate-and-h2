@@ -37,9 +37,22 @@ public class SpringBoot2JPAWithHibernateAndH2Application implements CommandLineR
 		logger.info("Student id 10001 -> {}", repository.findById(10001L));
 
 		
-		String name="";
+		String studentName="'Ranga'";
+		String studentpassportNumber="'E1234567' OR 1=1    ";
 		
-		List<Long> findStudentByName = repository.findStudentByName(name);
+		String id= "'1' or 1=1 ";
+		
+		Query createQuery = entityManager.createNativeQuery("select passportnumber from Student where name ="+ studentName +" and id ="+ id );
+		
+		//Query createQuery = entityManager.createNativeQuery("select * from Student where id= "+id);
+		
+		List resultList2 = createQuery.getResultList();
+		
+		System.out.println(resultList2);
+		
+		List<Long> findStudentByName = repository.findStudentByName(studentName,studentpassportNumber);
+		
+		
 		
 		System.out.println(findStudentByName);
 		

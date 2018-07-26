@@ -10,7 +10,7 @@ public class Student {
 	@GeneratedValue
 	private Long id;
 	private String name;
-	private String passportNumber;
+	private String passportnumber;
 
 	public Student() {
 		super();
@@ -20,13 +20,13 @@ public class Student {
 		super();
 		this.id = id;
 		this.name = name;
-		this.passportNumber = passportNumber;
+		this.passportnumber = passportNumber;
 	}
 
 	public Student(String name, String passportNumber) {
 		super();
 		this.name = name;
-		this.passportNumber = passportNumber;
+		this.passportnumber = passportNumber;
 	}
 
 	public Long getId() {
@@ -45,17 +45,19 @@ public class Student {
 		this.name = name;
 	}
 
-	public String getPassportNumber() {
-		return passportNumber;
+	public String getPassportnumber() {
+		return passportnumber;
 	}
 
-	public void setPassportNumber(String passportNumber) {
-		this.passportNumber = passportNumber;
+	public void setPassportnumber(String passportnumber) {
+		this.passportnumber = passportnumber;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Student [id=%s, name=%s, passportNumber=%s]", id, name, passportNumber);
+		return "Student [id=" + id + ", name=" + name + ", passportnumber=" + passportnumber + "]";
 	}
+
+	
 
 }
