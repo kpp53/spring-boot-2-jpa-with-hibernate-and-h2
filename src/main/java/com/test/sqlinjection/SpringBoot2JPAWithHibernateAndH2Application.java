@@ -51,9 +51,7 @@ public class SpringBoot2JPAWithHibernateAndH2Application implements CommandLineR
 		
 		List<Long> findStudentByName = repository.findStudentByName(studentName,studentpassportNumber);
 		
-		
-		
-		System.out.println(findStudentByName);
+		/*System.out.println(findStudentByName);*/
 		
 		
 		
