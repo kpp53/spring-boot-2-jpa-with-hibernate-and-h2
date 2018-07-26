@@ -44,9 +44,8 @@ public class SpringBoot2JPAWithHibernateAndH2Application implements CommandLineR
 		
 		Query createQuery = entityManager.createNativeQuery("select passportnumber from Student where name ="+ studentName +" and id ="+ id );
 		
-		//Query createQuery = entityManager.createNativeQuery("select * from Student where id= "+id);
 		
-		List resultList2 = createQuery.getResultList();
+		List<String> resultList2 = createQuery.getResultList();
 		
 		System.out.println(resultList2);
 		
